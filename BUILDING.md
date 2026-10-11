@@ -44,7 +44,7 @@ Run from the repository root:
 
 The script compiles:
 
-- `wemos-wifi-barodcaster/`
+- `wemos-wifi-broadcaster/`
 - `test-tools/beacon-counter/`
 
 It prints the normal compiler output plus a compact flash/IRAM table. To also
@@ -68,7 +68,7 @@ arduino-cli board list
 Upload the DUT, replacing `COM12` with its port:
 
 ```powershell
-arduino-cli upload --fqbn esp8266:esp8266:d1_mini_lite --port COM12 wemos-wifi-barodcaster
+arduino-cli upload --fqbn esp8266:esp8266:d1_mini_lite --port COM12 wemos-wifi-broadcaster
 ```
 
 Upload the counter, replacing `COM13` with its port:
@@ -84,7 +84,7 @@ resume after reset, so flash and power the DUT only inside RF isolation.
 
 1. Install ESP8266 board package 3.1.2.
 2. Open either the
-   [main sketch](wemos-wifi-barodcaster/wemos-wifi-barodcaster.ino) or
+   [main sketch](wemos-wifi-broadcaster/wemos-wifi-broadcaster.ino) or
    [counter sketch](test-tools/beacon-counter/beacon-counter.ino).
 3. Select **LOLIN(WEMOS) D1 mini Lite**.
 4. Select the correct serial port and upload.
@@ -104,7 +104,7 @@ to `master` and pull requests targeting `master`. It:
 5. Retains the Markdown memory report as a 30-day artifact.
 
 View current and previous runs on the repository's
-[Actions page](https://github.com/kolec94/wemos-wifi-barodcaster/actions/workflows/arduino-build.yml).
+[Actions page](https://github.com/kolec94/wemos-wifi-broadcaster/actions/workflows/arduino-build.yml).
 
 ## Memory baseline
 

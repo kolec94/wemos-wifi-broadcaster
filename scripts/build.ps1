@@ -8,7 +8,7 @@ $fqbn = "esp8266:esp8266:d1_mini_lite"
 $coreId = "esp8266:esp8266"
 $coreVersion = "3.1.2"
 $sketches = @(
-    @{ Name = "Main firmware"; Path = "wemos-wifi-barodcaster" },
+    @{ Name = "Main firmware"; Path = "wemos-wifi-broadcaster" },
     @{ Name = "Beacon counter"; Path = "test-tools/beacon-counter" }
 )
 

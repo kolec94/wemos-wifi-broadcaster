@@ -14,7 +14,7 @@ MAC address and a changing non-printable suffix after the configured base SSID.
 
 - [Build and flash both sketches](BUILDING.md)
 - [Run the two-board hardware test](TESTING.md)
-- [Main firmware](wemos-wifi-barodcaster/wemos-wifi-barodcaster.ino)
+- [Main firmware](wemos-wifi-broadcaster/wemos-wifi-broadcaster.ino)
 - [Passive beacon counter](test-tools/beacon-counter/beacon-counter.ino)
 - [Two-port serial dashboard](test-tools/serial-dashboard/index.html)
 - [GitHub Actions build](.github/workflows/arduino-build.yml)
@@ -23,7 +23,7 @@ MAC address and a changing non-printable suffix after the configured base SSID.
 
 | Path | Purpose |
 | --- | --- |
-| `wemos-wifi-barodcaster/` | Firmware for the device under test (DUT) |
+| `wemos-wifi-broadcaster/` | Firmware for the device under test (DUT) |
 | `test-tools/beacon-counter/` | Passive receiver firmware for a second D1 Mini |
 | `test-tools/serial-dashboard/` | Local Chrome/Edge Web Serial dashboard for both boards |
 | `scripts/build.ps1` | Pinned local build for both sketches |
@@ -61,7 +61,7 @@ root:
 Flash the DUT:
 
 ```powershell
-arduino-cli upload --fqbn esp8266:esp8266:d1_mini_lite --port COM12 wemos-wifi-barodcaster
+arduino-cli upload --fqbn esp8266:esp8266:d1_mini_lite --port COM12 wemos-wifi-broadcaster
 ```
 
 Flash the passive counter:
@@ -120,7 +120,7 @@ The recommended validation setup uses two boards:
 
 | Device | Firmware | Role |
 | --- | --- | --- |
-| DUT | [Main firmware](wemos-wifi-barodcaster/wemos-wifi-barodcaster.ino) | Sends beacons and hosts the config UI |
+| DUT | [Main firmware](wemos-wifi-broadcaster/wemos-wifi-broadcaster.ino) | Sends beacons and hosts the config UI |
 | Instrument | [Beacon counter](test-tools/beacon-counter/beacon-counter.ino) | Passively counts matching and other beacons once per second |
 
 The counter is configured at runtime over its 115200-baud serial connection:
