@@ -22,7 +22,7 @@ beacons contaminate the counter and make the results ambiguous.
 
 | Role | Hardware | Firmware or tool |
 | --- | --- | --- |
-| DUT | Wemos D1 Mini Lite #1 | [Main firmware](wemos-wifi-barodcaster/wemos-wifi-barodcaster.ino) |
+| DUT | Wemos D1 Mini Lite #1 | [Main firmware](wemos-wifi-broadcaster/wemos-wifi-broadcaster.ino) |
 | Instrument | Wemos D1 Mini Lite #2 | [Passive counter](test-tools/beacon-counter/beacon-counter.ino) |
 | Serial observer | Laptop | [Two-port dashboard](test-tools/serial-dashboard/index.html) |
 | UI client | Phone or dedicated WiFi adapter | Connects only to `WifiBroadcaster` |
